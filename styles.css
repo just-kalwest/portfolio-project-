@@ -431,7 +431,220 @@ header{
     font-size: 0.75rem;
     color: #6b7280; /* gray-500 */
   }
-/* *{
+  /* login */
+.login{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    align-items: center;
+    overflow: hidden;
+    margin: 2rem;
+}
+.login-logo{
+    display: flex;
+    position: relative;
+    right: 32rem;
+    margin: 0.5rem;
+}
+.login-logo img{
+    width: 30px;
+    height: 30px;
+}
+.login-logo span{
+    font-weight: bold;
+    color: #004d3c;
+    font-size: 18px;
+}
+.container {
+    max-width: 650px;
+    background: white;
+    border-radius: 20px;
+    margin-inline: 1rem;
+}
+.grid{
+    display: grid;
+    gap: 1rem;
+}
+.login-title{
+    font-size: x-large;
+    color: #004d3c;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.login-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-black-100);
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+}
+.login-input{
+    width: 100%;
+    background: none;
+    padding: 1.5rem 2.5rem 1.5rem 1.25rem;
+    font-weight: 600;
+    border: 3px solid transparent;
+    border-radius: 1rem;
+    z-index: 1;
+    transition: border-color .4s;
+}
+.login-input:autofill{
+    transition: background-color 6000s, color 6000s;
+}
+.login-label{
+    position: absolute;
+    left: 1.25rem;
+    font-weight: 500;
+    transition: transform .4s, font-size .4s, color .4s;
+}
+.login-icon{
+    position: absolute;
+    right: 1rem;
+    font-size: 1.25rem;
+    transition: color .4s;
+}
+.login-password{
+    cursor: pointer;
+    z-index: 10;
+}
+.login-forget{
+    display: block;
+    width: max-content;
+    margin: 1rem 0 0 auto;
+    font-size: small;
+    font-weight: 400;
+    color: var(--text-black-700);
+    transition: color .4s;
+}
+.login-forget:hover{
+    color: #004d3c;
+}
+.login-button{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    background-color: var(--bg-black-900);
+    color: var(--text-black-700);
+    font-weight: 600;
+    padding-block: 1.5rem;
+    border-radius: 4rem;
+    margin-block: 2rem;
+    cursor: pointer;
+    transition: background-color .4s, box-shadow .4s;
+}
+.login-button:hover{
+    color: white;
+    background-color: #004d3c;
+    box-shadow: 0 8px 24px hsla(208, 92%, 32%, .3);
+}
+.login-switch{
+    text-align: center;
+    font-size: small;
+}
+.login-switch button{
+    background: none;
+    color: #004d3c;
+    font-size: large;
+    font-weight: 500;
+    cursor: pointer;
+    border: 0;
+    transition: color .4s;
+}
+.login-switch button:hover{
+    color: var(--text-black-900);
+}
+.login-access,
+.login-register{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .4s, opacity .4s .1s;
+}
+.login-register{
+    transform: translateX(15rem);
+    pointer-events: none;
+    opacity: 0;
+    margin-top: 1rem;
+}
+.login-input:focus ~ .login-label{
+    transform: translateY(-12px);
+    font-size: small;
+}
+.login-input:focus{
+    padding-block: 2rem 1rem;
+    border-color: #004d3c;
+}
+.login-input:not(:placeholder-shown).login-input:not(:focus) ~ .login-label{
+    transform: translateY(-12px);
+    font-size: small;
+}
+.login-input:not(:placeholder-shown).login-input:not(:focus){
+    padding-block: 2rem 1rem;
+}
+.login-input:focus ~ .login-label,
+.login-input:focus ~ .login-icon{
+    color: #004d3c;
+}
+.active .login-access{
+    transform: translateX(15rem);
+    opacity: 0;
+    pointer-events: none;
+}
+.active .login-register{
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: initial;
+}
+
+@media screen and (max-width: 320px) {
+    .container{
+        margin-inline: 1rem;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    .login-area{
+        width: 380px;
+        margin-inline: auto;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-height: 600px) {
+    .login{
+        height: 760px;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    .container{
+        margin-inline: auto;
+    }
+    .login-area{
+        width: 460px;
+        margin: initial;
+    }
+    .login-access,
+    .login-register{
+        width: 600px;
+    }
+  
+    .login-title{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .login-button{
+        margin-bottom: 3rem;
+    }
+}
+/* 
+*{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
