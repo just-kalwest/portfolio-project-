@@ -1,3 +1,4 @@
+/*=====log in & sign up start====*/
 const passwordAccess = (loginPass, loginEye) =>{
     const input = document.getElementById(loginPass),
           iconEye = document.getElementById(loginEye)
@@ -25,3 +26,5 @@ buttonRegister.addEventListener('click', ()=>{
 buttonAccess.addEventListener('click', ()=>{
     loginAccessRegister.classList.remove('active')
 })
+/*=====log in & sign up end====*/
+
