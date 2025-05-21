@@ -299,7 +299,7 @@ header{
     --spacer: 5px;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 17%;
+    grid-auto-columns: 23%;
     gap: var(--spacer);
     overflow-x: auto;
     overscroll-behavior-inline: contain;
