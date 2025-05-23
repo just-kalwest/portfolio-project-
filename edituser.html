@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jodna Tech Portfolio</title>
+    <link rel="stylesheet" href="useredit.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/Logo.png" alt="logo">
+                <h1>Jodna Technologies</h1>
+            </div>
+            <h2>Explore</h2>
+            <input type="text" placeholder="Search Creatives work..." class="search" />
+            <button class="share-btn">Share Your Work <span>→</span></button>
+            <div class="notification-container">
+                <i class="fa fa-bell"></i>
+                <span class="notification-count" id="notifCount">5</span>
+            </div>
+
+            <div class="user">
+                <img src="images/Ellipse 1.png" alt="User" />
+                <div class="user-info">
+                    <h2>Adewale Austin</h2>
+                    <p>UI/UX Design Intern</p>
+                </div>
+
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="mobile-drawer" id="mobileDrawer">
+
+            <aside class="mobile-sidebar">
+                <div class="profile-img-wrapper">
+                    <img src="images/Ellipse 1.png" class="mobile-pic" alt="Profile" />
+                </div>
+                <h2>Adewale Austin</h2>
+                <p>UI/UX Designer | Frontend Developer</p>
+                <button class="edit-btn" onclick="goToEditPage()">Edit Profile</button>
+                <hr>
+                <div class="profile-text">
+                    <div class="views">
+                        <p>Portfolio Views</p>
+                        <p>800</p>
+                    </div>
+                    <div class="likes">
+                        <p>Likes</p>
+                        <p>200</p>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="profile-link">
+                    <a href="#">Help</a>
+                    <a href="#">Settings</a>
+                </div>
+
+                <button class="logout-btn" id="logoutBtn">Logout</button>
+
+            </aside>
+
+            <!-- Header Content (excluding logo, notif, and user-info) -->
+            <div class="mobile-header-extra">
+                <h2>Explore</h2>
+                <input type="text" placeholder="Search Creatives work..." class="search" />
+                <button class="share-btn">Share Your Work <span>→</span></button>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <div class="profile-img-wrapper">
+                <img src="images/Ellipse 1.png" class="profile-pic" alt="Profile" />
+            </div>
+            <h2>Adewale Austin</h2>
+            <p>UI/UX Designer | Frontend Developer</p>
+            <button class="edit-btn" onclick="goToEditPage()">Edit Profile</button>
+            <hr>
+            <div class="profile-text">
+                <div class="views">
+                    <p>Portfolio Views</p>
+                    <p>800</p>
+                </div>
+                <div class="likes">
+                    <p>Likes</p>
+                    <p>200</p>
+                </div>
+
+            </div>
+            <hr>
+            <div class="profile-link">
+                <a href="#">Help</a>
+                <a href="#">Settings</a>
+            </div>
+
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+        </aside>
+        
+<section class="content">
+    <h2>Edit Profile</h2>
+    <p class="subtitle">
+        Keep your personal details private. Information you add here is visible to anyone who can view your profile.
+    </p>
+
+    <h3>Photo</h3>
+    <div class="changePhoto">
+        <img src="images/Ellipse 1.png" alt="Ade" />
+        <button type="button">Change</button>
+    </div>
+
+    <div class="details">
+        <div class="form-group">
+            <label for="firstn">First Name</label>
+            <input type="text" id="firstn" placeholder="Austin" />
+        </div>
+
+        <div class="form-group">
+            <label for="lastn">Last Name</label>
+            <input type="text" id="lastn" placeholder="Adewale" />
+        </div>
+
+        <div class="form-group full">
+            <label for="about">About</label>
+            <textarea id="about" rows="3" ></textarea>
+        </div>
+
+        <div class="form-group full">
+            <label for="website">Website</label>
+            <input type="text" id="website" placeholder="https://" />
+            <small>Add a link to drive traffic to your site</small>
+        </div>
+
+        <div class="form-group full">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="AdewaleAustin" />
+        </div>
+    </div>
+
+    <button onclick="saveProfile()" class="save-btn">Save Changes</button>
+
+</section>
+
+    </main>
+
+    <script src="useredit.js"></script>
+</body>
+
+</html>

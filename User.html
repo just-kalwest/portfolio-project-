@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jodna Tech Portfolio</title>
+    <link rel="stylesheet" href="user.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/Logo.png" alt="logo">
+                <h1>Jodna Technologies</h1>
+            </div>
+            <h2>Explore</h2>
+            <input type="text" placeholder="Search Creatives work..." class="search" />
+            <button class="share-btn">Share Your Work <span>→</span></button>
+            <div class="notification-container">
+                <i class="fa fa-bell"></i>
+                <span class="notification-count" id="notifCount">5</span>
+            </div>
+
+            <div class="user">
+                <img src="images/Ellipse 1.png" alt="User" />
+                <div class="user-info">
+                    <h2>Adewale Austin</h2>
+                    <p>UI/UX Design Intern</p>
+                </div>
+
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="mobile-drawer" id="mobileDrawer">
+           
+            <aside class="mobile-sidebar">
+                <div class="profile-img-wrapper">
+                    <img src="images/Ellipse 1.png" class="mobile-pic" alt="Profile" />
+                </div>
+                <h2>Adewale Austin</h2>
+                <p>UI/UX Designer | Frontend Developer</p>
+                <button class="edit-btn" onclick="goToEditPage()">Edit Profile</button>
+                <hr>
+                <div class="profile-text">
+                    <div class="views">
+                        <p>Portfolio Views</p>
+                        <p>800</p>
+                    </div>
+                    <div class="likes">
+                        <p>Likes</p>
+                        <p>200</p>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="profile-link">
+                    <a href="#">Help</a>
+                    <a href="#">Settings</a>
+                </div>
+
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+
+            </aside>
+
+            <!-- Header Content (excluding logo, notif, and user-info) -->
+            <div class="mobile-header-extra">
+                <h2>Explore</h2>
+                <input type="text" placeholder="Search Creatives work..." class="search" />
+                <button class="share-btn">Share Your Work <span>→</span></button>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <div class="profile-img-wrapper">
+                <img src="images/Ellipse 1.png" class="profile-pic" alt="Profile" />
+            </div>
+            <h2>Adewale Austin</h2>
+            <p>UI/UX Designer | Frontend Developer</p>
+            <button class="edit-btn" onclick="goToEditPage()">Edit Profile</button>
+            <hr>
+            <div class="profile-text">
+                <div class="views">
+                    <p>Portfolio Views</p>
+                    <p>800</p>
+                </div>
+                <div class="likes">
+                    <p>Likes</p>
+                    <p>200</p>
+                </div>
+
+            </div>
+            <hr>
+            <div class="profile-link">
+                <a href="#">Help</a>
+                <a href="#">Settings</a>
+            </div>
+
+<button class="logout-btn" id="logoutBtn">Logout</button>
+        </aside>
+
+        <section class="content">
+            <nav class="tabs">
+                <button class="tab active">My Work</button>
+                <button class="tab">Saved Items</button>
+                <button class="tab">Draft</button>
+                <button class="tab">Analytics</button>
+                <button class="tab">About</button>
+            </nav>
+
+            <div class="work-grid">
+                <div class="card">
+                    <img src="images/6f3095467ba2139829302b5d993a4600ebe73445.jpg" alt="Work 1" />
+                    <h3>UX Design Fundamentals</h3>
+                    <div class="tags">
+                        <span class="design">Design</span>
+                        <span class="beginners">Beginner</span>
+                        <span class="tutorial">Tutorial</span>
+                    </div>
+<div class="card-info">
+    <p>25 mins</p>
+    <p>890 views</p>
+</div>                </div>
+                <div class="card">
+                    <img src="images/540a05a4a2ddeac71163890dd8330b94f21d0d9e.jpg" alt="Work 2" />
+                    <h3>UX Design Fundamentals</h3>
+                    <div class="tags">
+                        <span class="design">Design</span>
+                        <span class="beginners">Beginner</span>
+                        <span class="tutorial">Tutorial</span>
+                    </div>
+<div class="card-info">
+    <p>25 mins</p>
+    <p>890 views</p>
+</div>                </div>
+                <div class="card">
+                    <img src="images/7b95b8f054c48a573db37a10d8d62100d877080e.jpg" alt="Work 2" />
+                    <h3>UX Design Fundamentals</h3>
+                    <div class="tags">
+                        <span class="design">Design</span>
+                        <span class="beginners">Beginner</span>
+                        <span class="tutorial">Tutorial</span>
+                    </div>
+                    <div class="card-info">
+                        <p>25 mins</p>
+                        <p>890 views</p>
+                    </div>
+                  
+                </div>
+                <div class="card">
+                    <img src="images/38ca3d89963f64e7308794e423c67fd228ce7a8d.jpg" alt="Work 2" />
+                    <h3>UX Design Fundamentals</h3>
+                    <div class="tags">
+                        <span class="design">Design</span>
+                        <span class="beginners">Beginner</span>
+                        <span class="tutorial">Tutorial</span>
+                    </div>
+<div class="card-info">
+    <p>25 mins</p>
+    <p>890 views</p>
+</div>                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </section>
+    </main>
+
+    <script src="user.js"></script>
+</body>
+
+</html>
