@@ -21,21 +21,23 @@
         <div class="login-access">
             <h1 class="login-title">Log in to your account</h1>
             <div class="login-area">
-                <form action="" class="login-form">
+                <form action="" class="login-form" id="form" method="post">
                     <div class="login-content grid">
                         <div class="login-box">
-                            <input type="email" id="email" required placeholder="" class="login-input">
+                            <input type="email" id="emailLogin" required placeholder="" class="login-input">
                             <label for="email" class="login-label">Email</label>
                             <li class="fa fa-envelope login-icon"></li>
+                            <div class="error"></div>
                         </div>
                         <div class="login-box">
                             <input type="password" id="password" required placeholder="" class="login-input">
                             <label for="password" class="login-label">Password</label>
                             <li class="fa fa-eye-slash login-icon login-password" id="loginPassword"></li>
+                            <div class="error"></div>
                         </div>
                     </div>
                     <a href="#" class="login-forget">Forgot your password</a>
-                    <button type="submit" class="login-button">Login</button>
+                    <button type="submit" class="login-button" id="buttonLogin">Login</button>
                 </form>
                 <p class="login-switch">
                     Don't have an account?
@@ -50,24 +52,28 @@
                     <div class="login-content grid">
                         <div class="login-group grid">
                             <div class="login-box">
-                                <input type="text" id="fullName" required placeholder="" class="login-input">
+                                <input type="text" id="fullName" required placeholder="" class="login-input" name="fullname">
                                 <label for="fullname" class="login-label">Full Name</label>
+                                <div class="error"></div>
                             </div>
                             <div class="login-box">
-                                <input type="email" id="email" required placeholder="" class="login-input">
+                                <input type="email" id="emailRegister" required placeholder="" class="login-input">
                                 <label for="email" class="login-label">Email</label>
+                                <div class="error"></div>
                             </div>
                             <div class="login-box">
                                 <input type="password" id="passwordCreate" required placeholder="" class="login-input">
                                 <label for="passwordCreate" class="login-label">Password</label>
+                                <div class="error"></div>
                             </div>
                             <div class="login-box">
                                 <input type="password" id="passwordConfirm" required placeholder="" class="login-input">
                                 <label for="passwordConfirm" class="login-label">Confirm Password</label>
+                                <div class="error"></div>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="login-button">Sign Up ➜</button>
+                    <button type="submit" class="login-button" id="buttonSignUp">Sign Up ➜</button>
                 </form>
                 <p class="login-switch">
                     Already have an account?

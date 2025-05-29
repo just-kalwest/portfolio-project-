@@ -490,6 +490,15 @@ header{
     z-index: 1;
     transition: border-color .4s;
 }
+.login-box.error input {
+    border-color: #ff3860;
+}
+
+.login-box .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
 .login-input:autofill{
     transition: background-color 6000s, color 6000s;
 }
