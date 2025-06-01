@@ -29,8 +29,8 @@
         <button class="btn solid">Share Your Work ➜</button>
         <div class="icons">
           <div class="notification">
-            <span class="bell">&#128276;</span>
-            <span class="badge">5</span>
+            <span class="bell"><a href="notification.html">&#128276;</a></span>
+            <span class="badge" id="notificationBadge">0</span>
           </div>
           <div class="avatar">
             <img class="avatar-img" src="./images/avatar.jpg" alt="Adewale Austin">
@@ -127,127 +127,94 @@
         <h4>Marketing ></h4>
       </div>
     </div>
-    <div class="grid-layout">
-      <div class="card">
-        <img src="./images/fourth.png" alt="City view at sunset" class="card-image" />
-        <div class="card-body">
-          <h3 class="card-title">UX Design Fundamentals</h3>
-          <div class="card-tags">
-            <span class="tag tag-blue">Design</span>
-            <span class="tag tag-green">Beginner</span>
-            <span class="tag tag-purple">Tutorial</span>
-          </div>
-          <div class="card-footer">
-            <span>25 mins</span>
-            <span>890 views</span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./images/second.png" alt="City view at sunset" class="card-image" />
-        <div class="card-body">
-          <h3 class="card-title">UX Design Fundamentals</h3>
-          <div class="card-tags">
-            <span class="tag tag-blue">Design</span>
-            <span class="tag tag-green">Beginner</span>
-            <span class="tag tag-purple">Tutorial</span>
-          </div>
-          <div class="card-footer">
-            <span>25 mins</span>
-            <span>890 views</span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./images/third.png" alt="City view at sunset" class="card-image" />
-        <div class="card-body">
-          <h3 class="card-title">UX Design Fundamentals</h3>
-          <div class="card-tags">
-            <span class="tag tag-blue">Design</span>
-            <span class="tag tag-green">Beginner</span>
-            <span class="tag tag-purple">Tutorial</span>
-          </div>
-          <div class="card-footer">
-            <span>25 mins</span>
-            <span>890 views</span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./images/fourth.png" alt="City view at sunset" class="card-image" />
-        <div class="card-body">
-          <h3 class="card-title">UX Design Fundamentals</h3>
-          <div class="card-tags">
-            <span class="tag tag-blue">Design</span>
-            <span class="tag tag-green">Beginner</span>
-            <span class="tag tag-purple">Tutorial</span>
-          </div>
-          <div class="card-footer">
-            <span>25 mins</span>
-            <span>890 views</span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./images/fifth.png" alt="City view at sunset" class="card-image" />
-        <div class="card-body">
-          <h3 class="card-title">UX Design Fundamentals</h3>
-          <div class="card-tags">
-            <span class="tag tag-blue">Design</span>
-            <span class="tag tag-green">Beginner</span>
-            <span class="tag tag-purple">Tutorial</span>
-          </div>
-          <div class="card-footer">
-            <span>25 mins</span>
-            <span>890 views</span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./images/sixth.png" alt="City view at sunset" class="card-image" />
-        <div class="card-body">
-          <h3 class="card-title">UX Design Fundamentals</h3>
-          <div class="card-tags">
-            <span class="tag tag-blue">Design</span>
-            <span class="tag tag-green">Beginner</span>
-            <span class="tag tag-purple">Tutorial</span>
-          </div>
-          <div class="card-footer">
-            <span>25 mins</span>
-            <span>890 views</span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./images/seventh.png" alt="City view at sunset" class="card-image" />
-        <div class="card-body">
-          <h3 class="card-title">UX Design Fundamentals</h3>
-          <div class="card-tags">
-            <span class="tag tag-blue">Design</span>
-            <span class="tag tag-green">Beginner</span>
-            <span class="tag tag-purple">Tutorial</span>
-          </div>
-          <div class="card-footer">
-            <span>25 mins</span>
-            <span>890 views</span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./images/fourth.png" alt="City view at sunset" class="card-image" />
-        <div class="card-body">
-          <h3 class="card-title">UX Design Fundamentals</h3>
-          <div class="card-tags">
-            <span class="tag tag-blue">Design</span>
-            <span class="tag tag-green">Beginner</span>
-            <span class="tag tag-purple">Tutorial</span>
-          </div>
-          <div class="card-footer">
-            <span>25 mins</span>
-            <span>890 views</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="grid-layout" id="cardContainer"></div>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cardData = [
+          "./images/fourth.png",
+          "./images/fourth.png",
+          "./images/fourth.png",
+          "./images/fourth.png",
+          "./images/fourth.png",
+          "./images/fourth.png",
+          "./images/fourth.png",
+          "./images/fourth.png",
+        ];
+
+        const cardContainer = document.getElementById('cardContainer');
+
+        if (!cardContainer) {
+          console.error("cardContainer not found!");
+          return;
+        }
+
+        cardData.forEach(image => {
+          const card = document.createElement('div');
+          card.classList.add("card");
+          card.innerHTML = `
+            <img src="${image}" alt="City view at sunset" class="card-image" />
+            <div class="card-body">
+              <h3 class="card-title">UX Design Fundamentals</h3>
+              <div class="card-tags">
+                <span class="tag tag-blue">Design</span>
+                <span class="tag tag-green">Beginner</span>
+                <span class="tag tag-purple">Tutorial</span>
+              </div>
+              <div class="card-footer">
+                <span>25 mins</span>
+                <span>890 views</span>
+              </div>
+            </div>
+          `;
+          cardContainer.appendChild(card);
+        });
+      });
+
+      let notificationCount = 0
+
+      function updateNotificationBadge() {
+        const badge = document.getElementById('notificationBadge');
+        if(badge){
+          badge.textContent = notificationCount;
+          badge.style.display = notificationCount > 0 ? 'inline': 'none';
+        }
+      }
+
+      function receiveNotification(message) {
+          notificationCount++;
+          console.log("New notification:", message);
+          updateNotificationBadge();
+        }
+
+      /*   // Simulate incoming notifications every 5 seconds
+        setInterval(() => {
+          receiveNotification("You have a new message!");
+        }); */
+
+      // Initialize
+      updateNotificationBadge();
+
+
+      // Polling function
+      function fetchNotifications() {
+        fetch("https://your-api.com/notifications") // Replace with your real endpoint
+          .then(response => response.json())
+          .then(data => {
+            // Assuming your API gives an array of unread notifications
+            const unread = data.notifications.filter(n => !n.read);
+            updateNotificationBadge(unread.length);
+          })
+          .catch(err => {
+            console.error("Failed to fetch notifications:", err);
+          });
+      }
+
+      // Start polling every 10 seconds
+      setInterval(fetchNotifications, 10000);
+
+      // Also fetch immediately on page load
+      fetchNotifications();
+    </script>
 </body>
 </html>

@@ -1,3 +1,12 @@
+const loginBtn = document.getElementById("buttonLogin");
+const email = document.getElementById("emailLogin");
+const password = document.getElementById("password");
+const signUpBtn = document.getElementById("buttonSignUp");
+const fullName = document.getElementById("fullName").value;
+const emailInput = document.getElementById("emailRegister");
+const passwordInput = document.getElementById("passwordCreate");
+const confirmPassword = document.getElementById("passwordConfirm");
+
 /*=====log in & sign up start====*/
 const passwordAccess = (loginPass, loginEye) =>{
     const input = document.getElementById(loginPass),
@@ -8,130 +17,130 @@ const passwordAccess = (loginPass, loginEye) =>{
         input.type === 'password' ? input.type = 'text'
                                   : input.type = 'password'
         //icon change
-        iconEye.classList.toggle('fa fa-eye')
-        iconEye.classList.toggle('fa fa-eye-slash')
+        iconEye.classList.toggle('fa fa-eye');
+        iconEye.classList.toggle('fa fa-eye-slash');
     })
 }
-passwordAccess('password','loginPassword')
+passwordAccess('password','loginPassword');
 
-const form = document.getElementById("form")
-const fullName = document.getElementById("fullName")
-const emailRegister = document.getElementById("emailRegister")
-const passwordCreate = document.getElementById("passwordCreate")
-const passwordConfirm = document.getElementById("passwordConfirm")
-const emailLogin = document.getElementById("emailLogin")
-const password = document.getElementById("password")
-const buttonLogin = document.getElementById("buttonLogin")
-const buttonSignUp = document.getElementById("buttonSignUp")
+// const form = document.getElementById("form")
+// const fullName = document.getElementById("fullName")
+// const emailRegister = document.getElementById("emailRegister")
+// const passwordCreate = document.getElementById("passwordCreate")
+// const passwordConfirm = document.getElementById("passwordConfirm")
+// const emailLogin = document.getElementById("emailLogin")
+// const password = document.getElementById("password")
+// const buttonLogin = document.getElementById("buttonLogin")
+// const buttonSignUp = document.getElementById("buttonSignUp")
 
 
-form.addEventListener('submit', e =>{
-    e.preventDefault();
+// form.addEventListener('submit', e =>{
+//     e.preventDefault();
 
-    validateInputs();
-})
+//     validateInputs();
+// })
 
-const validateInputs = () => {
-    const fullName = document.getElementById("fullName")
-    const emailRegister = document.getElementById("emailRegister")
-    const passwordCreate = document.getElementById("passwordCreate")
-    const passwordConfirm = document.getElementById("passwordConfirm")
-    const emailLogin = document.getElementById("emailLogin")
-    const password = document.getElementById("password")
+// const validateInputs = () => {
+//     const fullName = document.getElementById("fullName")
+//     const emailRegister = document.getElementById("emailRegister")
+//     const passwordCreate = document.getElementById("passwordCreate")
+//     const passwordConfirm = document.getElementById("passwordConfirm")
+//     const emailLogin = document.getElementById("emailLogin")
+//     const password = document.getElementById("password")
 
-    if(fullName === '') {
-        setError(fullName, 'Full name is required');
-    } else {
-        setSuccess(fullName);
-    }
+//     if(fullName === '') {
+//         setError(fullName, 'Full name is required');
+//     } else {
+//         setSuccess(fullName);
+//     }
 
-    if(emailRegister === '') {
-        setError(emailRegister, 'Email is required');
-    } else if (!isValidEmail(emailRegister)) {
-        setError(emailRegister, 'Provide a valid email address');
-    } else{
-        setSuccess(emailRegister);
-    }
+//     if(emailRegister === '') {
+//         setError(emailRegister, 'Email is required');
+//     } else if (!isValidEmail(emailRegister)) {
+//         setError(emailRegister, 'Provide a valid email address');
+//     } else{
+//         setSuccess(emailRegister);
+//     }
 
-    if(passwordCreate === '') {
-        setError(passwordCreate, 'Password is required');
-    } else if (passwordCreate.length < 8) {
-        setError(passwordCreate, 'Password must be at least 8 character');
-    } else {
-        setSuccess(passwordCreate)
-    }
+//     if(passwordCreate === '') {
+//         setError(passwordCreate, 'Password is required');
+//     } else if (passwordCreate.length < 8) {
+//         setError(passwordCreate, 'Password must be at least 8 character');
+//     } else {
+//         setSuccess(passwordCreate)
+//     }
 
-    if(passwordConfirm === '') {
-        setError(passwordConfirm, 'Please confirm your password');
-    } else if(passwordConfirm !== passwordCreate) {
-        setError(passwordConfirm, "Passwords doesn't match");
-    } else{
-        setSuccess(passwordConfirm);
-    }
+//     if(passwordConfirm === '') {
+//         setError(passwordConfirm, 'Please confirm your password');
+//     } else if(passwordConfirm !== passwordCreate) {
+//         setError(passwordConfirm, "Passwords doesn't match");
+//     } else{
+//         setSuccess(passwordConfirm);
+//     }
 
-    if(fullName === '') {
-        setError(fullName, 'Full name is required');
-    } else {
-        setSuccess(fullName);
-    }
+//     if(fullName === '') {
+//         setError(fullName, 'Full name is required');
+//     } else {
+//         setSuccess(fullName);
+//     }
 
-    if(fullName === '') {
-        setError(fullName, 'Full name is required');
-    } else {
-        setSuccess(fullName);
-    }
-}
+//     if(fullName === '') {
+//         setError(fullName, 'Full name is required');
+//     } else {
+//         setSuccess(fullName);
+//     }
+// }
 
-const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
+// const setError = (element, message) => {
+//     const inputControl = element.parentElement;
+//     const errorDisplay = inputControl.querySelector('.error');
 
-    errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success');
-}
+//     errorDisplay.innerText = message;
+//     inputControl.classList.add('error');
+//     inputControl.classList.remove('success');
+// }
 
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
+// const setSuccess = element => {
+//     const inputControl = element.parentElement;
+//     const errorDisplay = inputControl.querySelector('.error');
 
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
-}
+//     errorDisplay.innerText = '';
+//     inputControl.classList.add('success');
+//     inputControl.classList.remove('error');
+// }
 
-const isValidEmail = email => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-}
-console.log(fullName)
-fullName.addEventListener("input", (event) => { 
-    console.log(event.target.value)
-})
+// const isValidEmail = email => {
+//     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+// }
+// console.log(fullName)
+// fullName.addEventListener("input", (event) => { 
+//     console.log(event.target.value)
+// })
 
-console.log(emailRegister)
-emailRegister.addEventListener("input", (event) => { 
-    console.log(event.target.value)
-})
+// console.log(emailRegister)
+// emailRegister.addEventListener("input", (event) => { 
+//     console.log(event.target.value)
+// })
 
-console.log(passwordCreate)
-passwordCreate.addEventListener("input", (event) => { 
-    console.log(event.target.value)
-})
+// console.log(passwordCreate)
+// passwordCreate.addEventListener("input", (event) => { 
+//     console.log(event.target.value)
+// })
 
-console.log(passwordConfirm)
-passwordConfirm.addEventListener("input", (event) => { 
-    console.log(event.target.value)
-})
+// console.log(passwordConfirm)
+// passwordConfirm.addEventListener("input", (event) => { 
+//     console.log(event.target.value)
+// })
 
-console.log(emailLogin)
-emailLogin.addEventListener("input", (event) => { 
-    console.log(event.target.value)
-})
+// console.log(emailLogin)
+// emailLogin.addEventListener("input", (event) => { 
+//     console.log(event.target.value)
+// })
 
-console.log(password)
-password.addEventListener("input", (event) => { 
-    console.log(event.target.value)
-})
+// console.log(password)
+// password.addEventListener("input", (event) => { 
+//     console.log(event.target.value)
+// })
 
 
 /*=====show or hide log in & sign up====*/
@@ -147,4 +156,148 @@ buttonAccess.addEventListener('click', ()=>{
     loginAccessRegister.classList.remove('active')
 })
 /*=====log in & sign up end====*/
+
+
+async function loginUser() {
+  const email = document.getElementById("emailLogin").value.trim();
+  const password = document.getElementById("password").value;
+
+  try {
+    const response = await fetch(
+      "https://jodna-portfolio.onrender.com/auth/login",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+        
+      }
+    );
+
+    const data = await response.json();
+    console.log(data);
+    
+
+    if (data.message === "successful") {
+      
+      localStorage.setItem("userId", data.data.user._id);
+      window.location.href = "./explore.html";
+    }else{
+      message.first
+    }
+  } catch (error) {
+    console.error("Login error:", error);
+    alert("An error occurred while trying to log in.");
+  }
+}
+
+
+const spinner = loginBtn.querySelector(".spinner");
+const btnText = loginBtn.querySelector(".btn-text");
+
+const img = btnText.nextElementSibling;
+
+loginBtn.addEventListener("click", () => {
+  loginUser();
+
+  spinner.classList.remove("hidden");
+  btnText.textContent = "Logging in...";
+  img.style.display = "none";
+})
+/* fetch("https://portfolio-backend-kj30.onrender.com/")
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error)); */
+
+ document.addEventListener("DOMContentLoaded", () => {
+  // Helper functions
+  const isValidEmail = (email) => {
+    // Simple email regex
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  // Login form validation
+  const loginForm = document.querySelector("#loginAccessRegister .login-access form");
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const emailInput = loginForm.querySelector("#emailLogin");
+    const passwordInput = loginForm.querySelector("#password");
+    let valid = true;
+
+    // Clear previous errors
+    loginForm.querySelectorAll(".error").forEach((el) => (el.textContent = ""));
+
+    if (!emailInput.value.trim()) {
+      emailInput.nextElementSibling.nextElementSibling.textContent = "Email is required";
+      valid = false;
+    } else if (!isValidEmail(emailInput.value.trim())) {
+      emailInput.nextElementSibling.nextElementSibling.textContent = "Invalid email format";
+      valid = false;
+    }
+
+    if (!passwordInput.value.trim()) {
+      passwordInput.nextElementSibling.nextElementSibling.textContent = "Password is required";
+      valid = false;
+    } else if (passwordInput.value.trim().length < 6) {
+      passwordInput.nextElementSibling.nextElementSibling.textContent = "Password must be at least 6 characters";
+      valid = false;
+    }
+
+    if (valid) {
+      // Submit the form or do something else
+      console.log("Login form valid!");
+      loginForm.submit(); // Remove if you handle submission with JS
+    }
+  });
+
+  // Register form validation
+  const registerForm = document.querySelector("#loginAccessRegister .login-register form");
+  registerForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const fullNameInput = registerForm.querySelector("#fullName");
+    const emailInput = registerForm.querySelector("#emailRegister");
+    const passwordCreateInput = registerForm.querySelector("#passwordCreate");
+    const passwordConfirmInput = registerForm.querySelector("#passwordConfirm");
+    let valid = true;
+
+    // Clear previous errors
+    registerForm.querySelectorAll(".error").forEach((el) => (el.textContent = ""));
+
+    if (!fullNameInput.value.trim()) {
+      fullNameInput.nextElementSibling.nextElementSibling.textContent = "Full Name is required";
+      valid = false;
+    }
+
+    if (!emailInput.value.trim()) {
+      emailInput.nextElementSibling.nextElementSibling.textContent = "Email is required";
+      valid = false;
+    } else if (!isValidEmail(emailInput.value.trim())) {
+      emailInput.nextElementSibling.nextElementSibling.textContent = "Invalid email format";
+      valid = false;
+    }
+
+    if (!passwordCreateInput.value.trim()) {
+      passwordCreateInput.nextElementSibling.nextElementSibling.textContent = "Password is required";
+      valid = false;
+    } else if (passwordCreateInput.value.trim().length < 8) {
+      passwordCreateInput.nextElementSibling.nextElementSibling.textContent = "Password must be at least 8 characters";
+      valid = false;
+    }
+
+    if (!passwordConfirmInput.value.trim()) {
+      passwordConfirmInput.nextElementSibling.nextElementSibling.textContent = "Please confirm your password";
+      valid = false;
+    } else if (passwordConfirmInput.value.trim() !== passwordCreateInput.value.trim()) {
+      passwordConfirmInput.nextElementSibling.nextElementSibling.textContent = "Passwords do not match";
+      valid = false;
+    }
+
+    if (valid) {
+      // Submit the form or do something else
+      console.log("Register form valid!");
+      registerForm.submit(); // Remove if you handle submission with JS
+    }
+  });
+});
 

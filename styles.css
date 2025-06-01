@@ -95,6 +95,9 @@ header{
 .bell {
     font-size: 22px;
 }
+.bell a{
+    text-decoration: none;
+}
 .badge {
     position: absolute;
     top: -8px;
@@ -344,32 +347,38 @@ header{
     width: 0;
 }
 .grid-layout {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1.5rem;
-    margin: 15px;
-  }
-  
-  @media (min-width: 640px) {
-    .grid-layout {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .grid-layout {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 15px auto;
+  max-width: 1200px;
+}
+
+/* Card: 4 per row by default */
+.card {
+  flex: 1 1 calc(25% - 1rem); /* 4 per row with gap accounted for */
+  background-color: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Responsive: 2 per row on tablets */
+@media (max-width: 768px) {
   .card {
-    background-color: white;
-    border-radius: 0.75rem;
-    overflow: hidden;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease;
+    flex: 1 1 calc(50% - 1rem);
   }
-  
+}
+
+/* Responsive: 1 per row on mobile */
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
   .card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   }
