@@ -158,51 +158,104 @@ buttonAccess.addEventListener('click', ()=>{
 /*=====log in & sign up end====*/
 
 
-async function loginUser() {
-  const email = document.getElementById("emailLogin").value.trim();
-  const password = document.getElementById("password").value;
+  // LOGIN FUNCTIONALITY
+  async function loginUser() {
+    const email = document.getElementById("emailLogin").value.trim();
+    const password = document.getElementById("password").value;
 
-  try {
-    const response = await fetch(
-      "https://jodna-portfolio.onrender.com/auth/login",
-      {
+    const loginBtn = document.getElementById("buttonLogin");
+    const spinner = loginBtn.querySelector(".spinner");
+    const btnText = loginBtn.querySelector(".btn-text");
+
+    try {
+      spinner?.classList.remove("hidden");
+      btnText && (btnText.textContent = "Logging in...");
+
+      const response = await fetch("https://jodna-portfolio.onrender.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
-        
+      });
+
+      const data = await response.json();
+      console.log(data);
+
+      if (data.message === "successful") {
+        localStorage.setItem("userId", data.data.user._id);
+        window.location.href = "./explore.html";
+      } else {
+        alert(data.message || "Login failed.");
       }
-    );
-
-    const data = await response.json();
-    console.log(data);
-    
-
-    if (data.message === "successful") {
-      
-      localStorage.setItem("userId", data.data.user._id);
-      window.location.href = "./explore.html";
-    }else{
-      message.first
+    } catch (error) {
+      console.error("Login error:", error);
+      alert("An error occurred while trying to log in.");
+    } finally {
+      spinner?.classList.add("hidden");
+      btnText && (btnText.textContent = "Login");
     }
-  } catch (error) {
-    console.error("Login error:", error);
-    alert("An error occurred while trying to log in.");
   }
-}
 
+  // REGISTER FUNCTIONALITY
+  async function registerUser() {
+    const fullName = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("emailRegister").value.trim();
+    const password = document.getElementById("passwordCreate").value.trim();
+    const confirmPassword = document.getElementById("passwordConfirm").value.trim();
 
-const spinner = loginBtn.querySelector(".spinner");
-const btnText = loginBtn.querySelector(".btn-text");
+    const registerBtn = document.getElementById("buttonSignUp");
+    const spinner = registerBtn.querySelector(".spinner");
+    const btnText = registerBtn.querySelector(".btn-text");
 
-const img = btnText.nextElementSibling;
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+    }
 
-loginBtn.addEventListener("click", () => {
-  loginUser();
+    const [firstname, ...rest] = fullName.split(" ");
+    const lastname = rest.join(" ") || "";
 
-  spinner.classList.remove("hidden");
-  btnText.textContent = "Logging in...";
-  img.style.display = "none";
-})
+    try {
+      spinner?.classList.remove("hidden");
+      btnText && (btnText.textContent = "Registering...");
+
+      const response = await fetch("https://jodna-portfolio.onrender.com/auth/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ firstname, lastname, email, password }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        window.location.href = "./login.html";
+        console.log("Registered:", data);
+      } else {
+        alert(data.message || "Registration failed.");
+      }
+    } catch (error) {
+      console.error("Registration error:", error);
+      alert("An error occurred during registration.");
+    } finally {
+      spinner?.classList.add("hidden");
+      btnText && (btnText.textContent = "Sign Up ➜");
+    }
+  }
+
+  // ATTACH EVENT LISTENERS
+  document.addEventListener("DOMContentLoaded", () => {
+    const loginForm = document.getElementById("form");
+    const registerForm = document.querySelector(".login-form");
+
+    loginForm?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      loginUser();
+    });
+
+    registerForm?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      registerUser();
+    });
+  });
+
 /* fetch("https://portfolio-backend-kj30.onrender.com/")
     .then(response => response.json())
     .then(data => console.log(data))
