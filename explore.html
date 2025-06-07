@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/media-queries-mobile.css"/>
+    <link rel="stylesheet" href="./css/media-queries-tablets.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Cherokee:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <!--==Navbar==-->
+    <header class="navbar">
+        <div class="logo">
+          <img src="./images/Logo.png" alt="Logo"/>
+          <span>Jodna Technologies</span>
+        </div>
+    
+        <nav class="nav-links">
+          <a href="#">Explore</a>
+        </nav>
+    
+        <div class="search-container">
+          <input type="text" placeholder="Search Creatives work..." />
+          <span class="search-icon">&#128269;</span>
+        </div>
+        <button class="btn solid">Share Your Work ➜</button>
+        <div class="icons">
+          <div class="notification">
+            <span class="bell"><a href="notification.html">&#128276;</a></span>
+            <span class="badge" id="notificationBadge">0</span>
+          </div>
+          <div class="avatar">
+            <img class="avatar-img" src="./images/avatar.jpg" alt="Adewale Austin">
+            <div class="user-info">
+                <h3>Adewale Austin</h3>
+                <h5>UI/UX Design Intern</h5>
+            </div>
+            <select name="Dropdown" id=""></select>
+          </div>
+        </div>
+    </header>
+    <section class="section-hero">
+        <div class="filter">
+            <h4><i class="fa-solid fa-sliders">
+              <!-- <div class="hamburger">
+                <div class="line-head">
+                <h4>Filter</h4>
+                <p>x</p>
+                </div>
+                <p>Tech Stack/Tools Used</p>
+                <div class="checkers">
+                  <ul>
+                    <li>
+                      <h5>Designs</h5>
+                      <input type="checkbox"><h5>Figma</h5>
+                      <input type="checkbox"><h5>Adobe XD</h5>
+                      <input type="checkbox"><h5>Sketch</h5>
+                      <input type="checkbox"><h5>Canva</h5>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <h5>Frpntend</h5>
+                      <input type="checkbox"><h5>Figma</h5>
+                      <input type="checkbox"><h5>Adobe XD</h5>
+                      <input type="checkbox"><h5>Sketch</h5>
+                      <input type="checkbox"><h5>Canva</h5>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <h5>Backend</h5>
+                      <input type="checkbox"><h5>Figma</h5>
+                      <input type="checkbox"><h5>Adobe XD</h5>
+                      <input type="checkbox"><h5>Sketch</h5>
+                      <input type="checkbox"><h5>Canva</h5>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <h5>Designs</h5>
+                      <input type="checkbox"><h5>Figma</h5>
+                      <input type="checkbox"><h5>Adobe XD</h5>
+                      <input type="checkbox"><h5>Sketch</h5>
+                      <input type="checkbox"><h5>Canva</h5>
+                    </li>
+                  </ul>
+                </div>
+              </div> -->
+            </i> Filter</h4>
+        </div>
+        <div class="search-bar">
+            <p><i class="fa-regular fa-magnifying-glass"></i></p>
+            <input type="text" placeholder="Search Creative Works...">
+        </div>
+        <div class="sort">
+            <h4><i class="fa-regular fa-filter"></i> Sort by</h4>
+            <select name="sort" id=""></select>
+        </div>
+    </section>
+    <div class="media-scroller snaps-inline">
+      <div class="media-element">
+        <h4>All ></h4>
+      </div>
+      <div class="media-element">
+        <h4>UI/UX Design ></h4>
+      </div>
+      <div class="media-element">
+        <h4>Frontend ></h4>
+      </div>
+      <div class="media-element">
+        <h4>Backend ></h4>
+      </div>
+      <div class="media-element">
+        <h4>Graphic Design ></h4>
+      </div>
+      <div class="media-element">
+        <h4>Web Developement ></h4>
+      </div>
+      <div class="media-element">
+        <h4>Web Application ></h4>
+      </div>
+      <div class="media-element">
+        <h4>Marketing ></h4>
+      </div>
+    </div>
+    <div class="grid-layout" id="cardContainer"></div>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cardData = [
+          "./images/fourth.png",
+          "./images/fourth.png",
+          "./images/fourth.png",
+          "./images/fourth.png",
+          "./images/fourth.png",
+          "./images/fourth.png",
+          "./images/fourth.png",
+          "./images/fourth.png",
+        ];
+
+        const cardContainer = document.getElementById('cardContainer');
+
+        if (!cardContainer) {
+          console.error("cardContainer not found!");
+          return;
+        }
+
+        cardData.forEach(image => {
+          const card = document.createElement('div');
+          card.classList.add("card");
+          card.innerHTML = `
+            <img src="${image}" alt="City view at sunset" class="card-image" />
+            <div class="card-body">
+              <h3 class="card-title">UX Design Fundamentals</h3>
+              <div class="card-tags">
+                <span class="tag tag-blue">Design</span>
+                <span class="tag tag-green">Beginner</span>
+                <span class="tag tag-purple">Tutorial</span>
+              </div>
+              <div class="card-footer">
+                <span>25 mins</span>
+                <span>890 views</span>
+              </div>
+            </div>
+          `;
+          cardContainer.appendChild(card);
+        });
+      });
+
+      let notificationCount = 0
+
+      function updateNotificationBadge() {
+        const badge = document.getElementById('notificationBadge');
+        if(badge){
+          badge.textContent = notificationCount;
+          badge.style.display = notificationCount > 0 ? 'inline': 'none';
+        }
+      }
+
+      function receiveNotification(message) {
+          notificationCount++;
+          console.log("New notification:", message);
+          updateNotificationBadge();
+        }
+
+      /*   // Simulate incoming notifications every 5 seconds
+        setInterval(() => {
+          receiveNotification("You have a new message!");
+        }); */
+
+      // Initialize
+      updateNotificationBadge();
+
+
+      // Polling function
+      function fetchNotifications() {
+        fetch("https://your-api.com/notifications") // Replace with your real endpoint
+          .then(response => response.json())
+          .then(data => {
+            // Assuming your API gives an array of unread notifications
+            const unread = data.notifications.filter(n => !n.read);
+            updateNotificationBadge(unread.length);
+          })
+          .catch(err => {
+            console.error("Failed to fetch notifications:", err);
+          });
+      }
+
+      // Start polling every 10 seconds
+      setInterval(fetchNotifications, 10000);
+
+      // Also fetch immediately on page load
+      fetchNotifications();
+    </script>
+</body>
+</html>

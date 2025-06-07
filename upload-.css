@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+ *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+ }
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    background-color: #fcfcfc;
+
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background: #ffff;
+    color: rgb(247, 244, 244);
+    gap: 2rem;
+    
+
+}
+
+.jodna {
+    display: flex;
+    flex-direction: row;
+}
+.jodna img {
+    opacity: 0.7;
+    border: none;
+}
+
+  .search-container{
+    position: relative;
+    width: 30rem;
+    display: flex;
+    border-radius: 50px;
+    padding: 20px;
+    border: 1px solid rgb(206, 203, 203); 
+     box-shadow: #FFFFFF;
+    height: 3px;
+    padding-left: 30px;
+    background: #ffffff;
+    cursor: pointer;
+    color: rgb(70, 69, 69);
+    margin-right: 0px;
+  }
+  .search-container input {
+    position: absolute;
+    width: 25rem;
+    border: none;
+    outline: none;
+    background-color: none;
+    font-size: 20px;
+    margin-left: 20px;
+    bottom: 2px;
+  }
+  .fa fa-search {
+    cursor: pointer;
+  }
+#badge {
+    position: absolute;
+    top: -8px;
+    left: 15px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 10px;
+} 
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    top: -20px;
+    right: 399px;
+    position: absolute;
+    bottom: -10px;
+}
+.notification {
+    position: relative;
+    font-size: 30px;
+    cursor: pointer;
+}
+#name-id{
+    display: flex;
+    flex-direction: column;
+     position: absolute;
+    left: 155px;
+    width: 100px; 
+    top: 18px;  
+    height: 500px;
+    margin-bottom: 10px;
+
+}
+#name-id button{
+    margin: 5px;
+    border: none;
+    width: 200px;
+    padding: 5px;
+    background-color: #ffffff;
+    
+    
+
+}
+ #upload-picture {
+    position: absolute;
+    background-color: bisque;
+    height: 90px;
+    width: 90px;
+    left: 71px;
+    margin-top: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+    border: 5px;
+}
+#dropdown {
+    position: absolute;
+    font-size: 20px;
+    padding: 10px;
+    left: 200px;
+    border: none;
+}
+.second-div{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 30px;
+    margin-top: 70px;
+}
+#cancel{
+position: absolute;
+border-radius: 50px;
+font-size: 20px;
+width: 90px;
+border: none;
+background: #ffffff;
+
+}
+#save{
+    position: absolute;
+    left: 1000px;
+    border-radius: 50px;
+    font-size: 20px;
+    width: 150px;
+    background: #FAFAFA;
+    border: 2px solid #006647;
+    gap: 5px;
+    color: #006647;
+}
+
+
+#continue{
+    position: absolute;
+    left: 1200px;
+    border-radius: 50px;
+    font-size: 20px;
+    width: 110px;
+    background: #006647;
+    color: #E6E6E6;
+}
+
+
+
+.upload-container{
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+#upload-h1 {
+    text-align: center;
+}
+
+#upload-p {
+    text-align: center;
+}
+
+.upload-feild {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 350px;
+    box-sizing: border-box;
+    border-style: dashed;
+    border: 1px dashed #d6d0d0;
+    border-width: 2px;
+    background-color: #f8f7f7;
+    justify-content: center;
+    align-items: center;
+    margin-left: 180px;
+    border-radius: 20px;
+    border-spacing: 40px;
+    padding: 20px;
+    top: 400px;
+    padding-bottom: 10px;
+}
+/* .upload-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+
+
+.drag-drop-area {
+    background: white;
+    border: 3px dashed #aaa;
+    border-radius: 12px;
+    width: 500px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: border-color 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  .drag-drop-area.dragover {
+    border-color: #008774;
+    background-color: #eef7ff;
+  }
+  .drag-row {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .drag-text {
+    flex: 1;
+    font-size: 1.2rem;
+    color: #4d4b4b;
+    user-select: none;
+  }
+  .browse-btn-label {
+    cursor: pointer;
+    color: #008774;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0;
+    text-decoration: none;
+    user-select: none;
+  }
+  .browse-btn-label:hover {
+    color: #008774;
+  }
+  input[type="file"] {
+    display: none;
+  }
+  #file-list {
+    margin-right: 200px;
+    font-size: 0.95rem;
+    color: #444;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  #file-list ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+  #file-list li {
+    margin-bottom: 6px;
+  }
+  .upload-status {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #008774;
+  }
+
+ #pro-tip {
+    width: 847px;
+    height: 26px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 120px;
+    margin-left: 260px;
+    margin-bottom: 40px;
+    
+} 
+strong{
+    font-size: larger;
+}
+@media screen and (max-width: 600px){
+    body {
+        margin-top: 15px;
+    }
+    
+  .jodna {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .jodna img {
+    width: 40px;
+  }
+  #explore {
+    display: block;
+    position: absolute;
+top: 90px;
+  }
+  .search-container {
+    position: relative;
+    width: 300px;
+    display: flex;
+    border-radius: 50px;
+    padding: 20px;
+    border: 2px solid;
+    left: -130px;
+    top: 120px;
+    height: 3px;
+    padding-left: 20px;
+    cursor: pointer;
+    color: rgb(70, 69, 69);
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .search-container input {
+    position: absolute;
+    width: 280px;
+    border: none;
+    outline: none;
+    background-color: none;
+    font-size: 20px;
+    margin-left: 20px;
+    bottom: 2px;
+  }
+  .bell {
+    font-size: 22px;
+}
+ #badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 10px;
+    position:absolute;
+    top: 5px;
+} 
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    align-items: end;
+    bottom: 80px;
+    left: 320px;
+  margin-left: 9px;
+    margin-bottom: 20px;
+    position: absolute;
+}
+.notification {
+  position: relative;
+    font-size: 30px;
+    cursor: pointer;
+}
+.bell {
+    font-size: 22px;
+} 
+ #upload-picture {
+    display: flex;
+    flex-direction: column;
+     position: relative;
+     width: 40%;
+    top: 235px;
+    gap: 10px;
+    left: -270px;
+    margin-top: 10px;
+
+} 
+
+  #upload-picture{
+  
+    position: absolute;
+    bottom: 20px;
+    background-color: bisque;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px;
+    margin-top: 10px;
+} 
+#name-id {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 370px;
+    gap: 10px;
+    left: -270px;
+    margin-top: 10px;
+}
+#name-id input {
+  margin-top: 5px;
+  border: none;
+}
+#dropdown {
+    position: absolute;
+    font-size: 10px;
+    padding: 10px;
+    top: -398px;
+    left: 340px;
+    border: none;
+    outline: none;
+     margin-right: 40px;
+}
+.second-div {
+    position: absolute;
+    top: -30px;
+    gap: 10px;
+    left: -35px;
+}
+#cancel {
+position: absolute;
+border-radius: 50px;
+font-size: 20px;
+top: 420px;
+width: 90px;
+left: -3px;
+border: none;
+background: #ffffff;
+
+}
+#save {
+    position: absolute;
+    border-radius: 50px;
+    font-size: 20px;
+    width: 150px;
+    top: 420px;
+    left: 95px;
+    background: #FAFAFA;
+    border: 2px solid #006647;
+    gap: 5px;
+    color: #006647;
+}
+
+
+#continue {
+    position: absolute;
+    border-radius: 50px;
+    font-size: 20px;
+    top: 420px;
+    left: 260px;
+    width: 110px;
+    background: #006647;
+    color: #E6E6E6;
+}
+
+.upload-container{
+    padding-bottom: 30px;
+    position: absolute;
+    top: 500px;
+    left: 40px;
+}
+
+#upload-h1 {
+    text-align: center;
+    margin-right: 40px;
+}
+
+#upload-p {
+    text-align: center;
+    margin-right: 40px;
+}
+
+#upload-feild {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 460px;
+    height: 350px;
+    box-sizing: border-box;
+    border-style: dashed;
+    border: 1px dashed #d6d0d0;
+    border-width: 2px;
+    background-color: #f8f7f7;
+    border-radius: 20px;
+    border-spacing: 40px;
+    padding: 20px;
+    top: 630px;
+    left: -170px;
+    padding-bottom: 10px;
+}
+#upload-area {
+  text-align: center;
+}
+ #drop-area {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 20px;
+    align-items: center;
+}
+
+#upload-feild header {
+    font-size: 20px;
+    font-weight: 100;
+}
+#upload-feild span{
+    font-size: 20px;
+
+}
+#upload-feild input 
+
+#browse {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+#upload {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+ #pro-tip {
+  position: absolute;
+  top: 950px;
+  left: -250px;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 45px;
+    padding-bottom: 30px;
+    max-width: 450px;
+    font-size: -30px;
+} 
+#drag-browse{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    left: 50px;
+}
+#drag-browse input{
+    color: aquamarine;
+}
+strong{
+    font-size: smaller;
+}
+
+
+}
+
+
