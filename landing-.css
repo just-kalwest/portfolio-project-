@@ -250,23 +250,13 @@ span{
     gap: 25px;
    
 }
-
-/* .profile-link a {
-    display: block;
-    color: #555;
-    text-align: left;
-    padding: 0.5em 0;
-    text-decoration: none;
-} */
-
 .profile-text
  {
     text-align: left;
     margin: 1em 0;
 }
 
-.views,
-.likes {
+.views, .likes {
     display: flex;
     justify-content: space-between;
 }
@@ -588,9 +578,9 @@ width: 60%;
 
 @media screen and (max-width: 600px){
     body{
-        max-width: 600px;
         max-height: 100vh;
-        overflow-x: hidde;
+        overflow-x: hidden;
+    
     }
   .jodna {
     display: flex;
@@ -669,10 +659,6 @@ width: 60%;
     font-size: 30px;
     cursor: pointer;
 }
-.bell {
-    font-size: 22px;
-} 
-
  .log-sign-up{
     display: flex;
     position: absolute;
@@ -697,21 +683,21 @@ width: 60%;
 
 }
  .first-section {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: relative;
     margin-top: 150px;
     max-width: 580px;
     height: 900px;
     background-color: rgb(203, 243, 243);
     margin-bottom: 40px;
-    overflow-x: hidden;
-    flex-grow: 0;
+    flex-grow: 1;
 }
 .first-section-1 {
     display: flex;
     flex-direction: column;
     justify-items: center;
-    width: 100%;
+    width: 50%;
     height: 60%;
 }
 .first-section-1 p {
@@ -744,23 +730,49 @@ width: 60%;
 .first-section-1-input h2{
     font-size: 20px;
 }
+/* .first-section-2 svg {
+    position: absolute;
+    margin-left: 165px;
+    top: -130px;
+    left: 400px;
+}  */
 
-.first-section-2 {
-    max-width: 580px;
+ /* .first-section-2 {
+    width: 580px;
     background-color: rgb(203, 243, 243);
     display: flex;
+    right: -100px;
     position: absolute;
 }
 .first-section-2 svg {   
-    width: 450px;
+    width: 350px;
     height: 420px;
+    position: absolute;
+    bottom: 0px;
+    right: 350px;
+    
+    
+}  */
+
+ .first-section-2 {
+    max-width: 300px;
+    background-color: rgb(203, 243, 243);
+    display: flex;
+    
+}
+.first-section-2 svg { 
+    position: absolute;
+    left: -200px;  
+    top: 450px;
+    width: 400px;
+    height: 670px;
 }
 #react{
     display: flex;
     flex-direction: row;
     position: absolute;
-    top: -15px;
-    right: 90px;
+    top: 650px;
+    right: 10px;
     width: 120px;
     height: 50px;
     background: #E6FFF7;
@@ -770,8 +782,8 @@ width: 60%;
     display: flex;
     flex-direction: row;
     position: absolute;
-    top: 150px;
-    left: -40px;
+    top: 720px;
+    right: 270px;
     width: 120px;
     height: 50px;
     background: #E6FFF7;
@@ -782,8 +794,8 @@ width: 60%;
     flex-direction: row;
     position: absolute;
     width: 120px;
-    top: 300px;
-    right: 100px;
+    top: 890px;
+    right: 30px;
     text-align: inherit;
     height: 50px;
     background: #E6FFF7;
@@ -888,6 +900,343 @@ footer{
 width: 40%;
 }
 .footer-bottom-2{
+    margin-top: 10;
+}
+}
+
+@media (min-width: 600px) and (max-width: 950px) {
+  body{
+        max-height: 100vh;
+        overflow-x: hidden;
+    }
+  .jodna {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .jodna img {
+    width: 40px;
+
+  }
+  .jodna-name {
+        position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 50px;
+  }
+  #explore {
+    display: block;
+    position: absolute;
+    top: 120px;
+    left: 5px;
+  }
+  .search-container {
+    position: absolute;
+    width: 700px;
+    display: flex;
+    border-radius: 50px;
+    padding: 20px;
+    border: 2px solid;
+    left: 5px;
+    top:59px;
+    height: 3px;
+    padding-left: 20px;
+    cursor: pointer;
+    color: rgb(70, 69, 69);
+    margin-right: 0px;
+    margin-bottom: 120px;
+  }
+  .search-container input {
+    position: absolute;
+    width: 590px;
+    border: none;
+    outline: none;
+    background-color: none;
+    font-size: 20px;
+    margin-left: 20px;
+    bottom: 2px;
+  }
+  .bell {
+    font-size: 22px;
+}
+ #badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 10px;
+    position:absolute;
+    top: 5px;
+} 
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    align-items: end;
+    top: 0px;
+    right: -300px;
+  margin-left: 9px;
+    margin-bottom: 20px;
+    position: absolute;
+}
+.notification {
+  position: relative;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+ .log-sign-up{
+    display: flex;
+    position: absolute;
+    top: 125px;
+    left: 1px;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+
+    
+  }
+  .log-sign-up button {
+    display: flex;
+    flex-direction: row;
+    border-radius: 3rem;
+    text-align: center;
+    background-color: transparent;
+    font-size: 0.8;
+    height: 2rem;
+    transition: all 0.35 ease-in-out;
+    border: 2px solid rgb(40, 53, 40);
+
+}
+ .first-section {
+    display: flex;
+    position: relative;
+    margin-top: 150px;
+    max-width: 950px;
+    height: 510px;
+    background-color: rgb(203, 243, 243);
+    margin-bottom: 40px;
+    overflow-x: hidden;
+    flex-grow: 0;
+}
+.first-section-1 {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+    height: 60%;
+}
+.first-section-1 p {
+    font-size:20px;
+    margin-bottom: 50px;
+}
+#explore-portfolio {
+    border-radius: 40px;
+    width: 295px;
+    padding: 8px;
+}
+.first-section-1 h2{
+    font-size: 50px;
+    font-weight: 250;
+}
+
+.first-section-1-button{
+    display: flex;
+    flex-direction: column;
+}
+.first-section-1-input button{
+    border-radius: 30px;
+    width: 16.5rem;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    transition: all 0.35 ease-in-out;
+    border: 2px transparent;
+}
+.first-section-1-input h2{
+    font-size: 20px;
+}
+
+.first-section-2 {
+    max-width: 580px;
+    background-color: rgb(203, 243, 243);
+    display: flex;
+    position: absolute;
+}
+.first-section-2 svg { 
+    position: absolute;
+    left: 130px;  
+    top: 50;
+    width: 480px;
+    height: 670px;
+}
+#react{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 90px;
+    left: 590px;
+    width: 120px;
+    height: 50px;
+    background: #E6FFF7;
+    text-align: center;
+}
+#figma{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 190px;
+    left: 330px;
+    width: 120px;
+    height: 50px;
+    background: #E6FFF7;
+    text-align: center;
+}
+#node{
+     display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 120px;
+    top: 280px;
+    left: 667px;
+    text-align: inherit;
+    height: 50px;
+    background: #E6FFF7;
+    text-align: center;
+}
+
+.second-section {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 900px;
+    padding-top: 60px;
+    padding-bottom: 65px;
+    margin: 50px;
+    background: #FFFFFF
+} 
+.second-section-box{
+    display: flex;
+    flex-direction: row;
+    width: 1240px;
+    gap: 25px;
+   
+}
+#item-a {
+display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 298px;
+}
+ #item-2 {
+display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 298px;
+    left: 385px;
+ }
+#item-3 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 500px;
+     width: 298px;
+    left: 10px;
+}
+
+#item-4{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 298px;
+    height: 410px;
+    top: 500px;
+    left: 385px;
+}
+footer{
+    height: 550px;
+    background: #003324;
+    border-top: 60px solid rgb(203, 243, 243); 
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    height: 480px;
+    width: 680px;
+    background-color: #003324;
+    border: solid  #006647 0.2rem;
+    padding: o;
     margin-top: 0;
+    box-sizing: border-box;
+    gap: 30px;
+
+}
+.footer-left  {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: 350px;
+    color: #FFFFFF;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 70px;
+    width: 350px;
+} 
+.footer-left p {
+    width: 290px;
+    line-height: 3;
+}
+.input-div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 200px;
+    gap: 9px;
+}
+#subscribe {
+    height: 40px;
+}
+#newsletter {
+    width: 200px;
+    padding: 18px;
+    background: #003324;
+    color: #CCCCCC;
+    background: #003324;
+    border: 1px solid #CCCCCC;
+}
+.footer-right{
+     display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: 350px;
+    padding-right: 0;
+    width: 50%;
+}
+.footer-right {
+    display: flex;
+    flex-direction: row;
+}  
+.footer-container .footer-bottom{
+    display: flex;
+    flex-direction: column;
+}
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    
+}
+.footer-bottom-1{
+width: 30%;
+}
+.footer-bottom-2{
+    margin-top: 10;
 }
 }
+
+

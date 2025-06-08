@@ -288,12 +288,15 @@ strong{
 @media screen and (max-width: 600px){
     body {
         margin-top: 15px;
+        position: relative;
+        
     }
     
   .jodna {
     display: flex;
+    position: absolute;
     flex-direction: column;
-    width: 100%;
+    top: -35px;
   }
   .jodna img {
     width: 40px;
@@ -301,17 +304,17 @@ strong{
   #explore {
     display: block;
     position: absolute;
-top: 90px;
+top: 60px;
   }
   .search-container {
     position: relative;
-    width: 300px;
+    width: 350px;
     display: flex;
     border-radius: 50px;
     padding: 20px;
     border: 2px solid;
-    left: -130px;
-    top: 120px;
+    left: 10px;
+    top: 60px;
     height: 3px;
     padding-left: 20px;
     cursor: pointer;
@@ -321,7 +324,7 @@ top: 90px;
   }
   .search-container input {
     position: absolute;
-    width: 280px;
+    width: 290px;
     border: none;
     outline: none;
     background-color: none;
@@ -339,7 +342,7 @@ top: 90px;
     padding: 3px 6px;
     font-size: 10px;
     position:absolute;
-    top: 5px;
+    top: -1px;
 } 
 .icons {
     display: flex;
@@ -347,8 +350,8 @@ top: 90px;
     gap: 10px;
     display: flex;
     align-items: end;
-    bottom: 80px;
-    left: 320px;
+    bottom: 40px;
+    left: 259px;
   margin-left: 9px;
     margin-bottom: 20px;
     position: absolute;
@@ -364,36 +367,26 @@ top: 90px;
  #upload-picture {
     display: flex;
     flex-direction: column;
-     position: relative;
+     position: absolute;
      width: 40%;
-    top: 235px;
+    top: 180px;
     gap: 10px;
-    left: -270px;
+    left: -250px;
     margin-top: 10px;
 
 } 
 
-  #upload-picture{
   
-    position: absolute;
-    bottom: 20px;
-    background-color: bisque;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: 5px;
-    margin-top: 10px;
-} 
 #name-id {
   display: flex;
   position: absolute;
   flex-direction: column;
-  top: 370px;
+  top: 280px;
     gap: 10px;
-    left: -270px;
+    left: -300px;
     margin-top: 10px;
 }
-#name-id input {
+#name-id button {
   margin-top: 5px;
   border: none;
 }
@@ -401,17 +394,16 @@ top: 90px;
     position: absolute;
     font-size: 10px;
     padding: 10px;
-    top: -398px;
-    left: 340px;
+    top: -320px;
+    left: 360px;
     border: none;
     outline: none;
      margin-right: 40px;
 }
 .second-div {
-    position: absolute;
-    top: -30px;
     gap: 10px;
-    left: -35px;
+    top: -175px;
+    margin-left: 4px;
 }
 #cancel {
 position: absolute;
@@ -451,10 +443,10 @@ background: #ffffff;
 
 .upload-container{
     padding-bottom: 30px;
-    position: absolute;
-    top: 500px;
-    left: 40px;
-}
+     position: absolute;
+    top: 460px;
+    right: 6px; 
+} */
 
 #upload-h1 {
     text-align: center;
@@ -466,11 +458,11 @@ background: #ffffff;
     margin-right: 40px;
 }
 
-#upload-feild {
+.upload-feild {
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 460px;
+    width: 370px;
     height: 350px;
     box-sizing: border-box;
     border-style: dashed;
@@ -480,30 +472,9 @@ background: #ffffff;
     border-radius: 20px;
     border-spacing: 40px;
     padding: 20px;
-    top: 630px;
-    left: -170px;
-    padding-bottom: 10px;
+     top: 575px;
+    left: -170px; 
 }
-#upload-area {
-  text-align: center;
-}
- #drop-area {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    gap: 20px;
-    align-items: center;
-}
-
-#upload-feild header {
-    font-size: 20px;
-    font-weight: 100;
-}
-#upload-feild span{
-    font-size: 20px;
-
-}
-#upload-feild input 
 
 #browse {
     font-size: 30px;
@@ -518,13 +489,13 @@ background: #ffffff;
 
  #pro-tip {
   position: absolute;
-  top: 950px;
+  top: 915px;
   left: -250px;
     text-align: center;
     padding-top: 15px;
-    margin-top: 45px;
+    margin-top: 0;
     padding-bottom: 30px;
-    max-width: 450px;
+    max-width: 380px;
     font-size: -30px;
 } 
 #drag-browse{
@@ -544,4 +515,202 @@ strong{
 
 }
 
+@media (min-width: 600px) and (max-width: 950px) {
+     body {
+        margin-top: 15px;
+        position: relative;
+        
+    }
+    
+  .jodna {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    top: -35px;
+  }
+  .jodna img {
+    width: 40px;
+  }
+  #explore {
+    display: block;
+    position: absolute;
+top: -17px;
+left: 130px;
+  }
+  .search-container {
+    position: relative;
+    width: 500px;
+    display: flex;
+    border-radius: 50px;
+    padding: 20px;
+    border: 2px solid;
+    left: 10px;
+    top: 60px;
+    height: 3px;
+    padding-left: 20px;
+    cursor: pointer;
+    color: rgb(70, 69, 69);
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .search-container input {
+    position: absolute;
+    width: 400px;
+    border: none;
+    outline: none;
+    background-color: none;
+    font-size: 20px;
+    margin-left: 20px;
+    bottom: 2px;
+  }
+  .bell {
+    font-size: 22px;
+}
+ #badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 10px;
+    position:absolute;
+    top: -1px;
+} 
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    align-items: end;
+    bottom: 40px;
+    left: 350px;
+  margin-left: 9px;
+    margin-bottom: 20px;
+    position: absolute;
+}
+.notification {
+  position: relative;
+    font-size: 30px;
+    cursor: pointer;
+}
+.bell {
+    font-size: 22px;
+} 
+ #upload-picture {
+    display: flex;
+    flex-direction: column;
+     position: absolute;
+     width: 40%;
+    top: -28px;
+    gap: 10px;
+    left: 80px;
+    margin-top: 10px;
 
+} 
+#name-id {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: -28px;
+    gap: 10px;
+    left: 165px;
+    margin-top: 10px;
+}
+#name-id button {
+  margin-top: 5px;
+  border: none;
+}
+#dropdown {
+    position: absolute;
+    font-size: 10px;
+    padding: 10px;
+    left: 200px;
+    border: none;
+    outline: none;
+     margin-right: 40px;
+}
+.second-div {
+  display: flex;
+  align-content: space-around;
+    top: -400px;
+    margin-left: 4px;
+}
+#cancel {
+position: absolute;
+border-radius: 50px;
+font-size: 20px;
+top: 420px;
+width: 90px;
+left: -3px;
+border: none;
+background: #ffffff;
+
+}
+#save {
+    position: absolute;
+    border-radius: 50px;
+    font-size: 20px;
+    width: 150px;
+    top: 420px;
+    left: 260px;
+    background: #FAFAFA;
+    border: 2px solid #006647;
+    gap: 5px;
+    color: #006647;
+}
+
+
+#continue {
+    position: absolute;
+    border-radius: 50px;
+    font-size: 20px;
+    top: 420px;
+    left: 660px;
+    width: 110px;
+    background: #006647;
+    color: #E6E6E6;
+}
+
+.upload-container{
+    padding-bottom: 30px;
+     position: absolute;
+    top: 300px;
+    right: 220px; 
+} 
+
+.upload-feild {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 770px;
+    height: 550px;
+    box-sizing: border-box;
+    border-style: dashed;
+    border: 1px dashed #d6d0d0;
+    border-width: 2px;
+    background-color: #f8f7f7;
+    border-radius: 20px;
+    border-spacing: 40px;
+    padding: 20px;
+     top: 455px;
+    left: -152px; 
+}
+
+ #pro-tip {
+  position: absolute;
+  top: 1009px;
+  left: -250px;
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 30px;
+    padding-bot: 30px;
+    max-width: 779px;
+    font-size: 20px;
+} 
+
+strong{
+    font-size: smaller;
+}
+
+}
+
+  
